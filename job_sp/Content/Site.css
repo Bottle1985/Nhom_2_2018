@@ -1,0 +1,160 @@
+﻿body {
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+.control
+{
+    background-color : blueviolet;
+    height : 100px;
+    padding : 10px;
+}
+.ten_dau {
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.login {
+    width: 500px;
+    text-align: left;
+    font-size: 20px;
+    font-family: 'Times New Roman';
+    margin:100px auto;
+    padding:20px
+}
+.input {
+    width: fit-content;
+    text-align: left;
+    font-size: 20px;
+    font-family: 'Times New Roman';
+    margin: 0px auto;
+}
+.button_login {
+    font-size: 25px;
+    margin: 30px 170px;
+    background-color: #964ce8;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    border-radius: 20px;
+    outline:none;
+}
+
+/* css cho trang chu*/
+
+.option {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -50%);
+}
+
+.background {
+    background-color: #ffffff;
+}
+.name_web {
+    height: auto;
+    width: auto;
+    padding: 10px;
+    font-family: Arial;
+    font-size: 50px;
+    color: black;
+}
+
+.img {
+    margin-top: 10%;
+    margin-left: 5%;
+    height: 300px;
+    width: 500px;
+}
+.button {
+    background-color: #a800ff;
+    width: 400px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 25px;
+    border-radius: 20px;
+    text-decoration: none;
+    outline: none;
+    margin: 20px;
+}
+
+/* css cho create ung vien */
+
+.ung_vien {
+    justify-content: left;
+    height: auto;
+    width: 1150px;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    border-style: groove;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 10px 10px;
+}
+
+.avatar {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left:50px;
+    height: auto;
+    width: auto;
+    border-style: double;
+    border-radius:100%;
+}
+.textt
+{
+    font-family:'Times New Roman';
+    font-size:20px;
+    margin-bottom:5px;
+    margin-top:20px;
+    color:blue;
+}
+.textbox {
+    width: 300px;
+    text-align: left;
+    font-size: 20px;
+    font-family: 'Times New Roman';
+    border-top : none;
+    border-right :none;
+    border-left:none;
+    outline :none;
+}
+.line_ngan {
+    width: 80%;
+    height: 1px;
+    background-image: radial-gradient(#2803a6, #9495be, white);
+    margin-top: 10%;
+    margin-bottom: 7%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.line_daude {
+    width: 80%;
+    height: 3px;
+    background-image: radial-gradient(#2803a6, #9495be, white);
+    margin:auto;
+}
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 800px;
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0fc80f369237403c86232a77193c179d" Name="Diagram1" ZoomLevel="95">
+        <EntityTypeShape EntityType="job_suppbortModel.congViec" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="job_suppbortModel.diaChi" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="job_suppbortModel.kyNang" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="job_suppbortModel.ngoaiNgu" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="job_suppbortModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="job_suppbortModel.tinhTrang_TD" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="job_suppbortModel.tt_tuyenDung" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="job_suppbortModel.tt_ungVien" Width="1.5" PointX="7.5" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="job_suppbortModel.trinhDo" Width="1.5" PointX="2.875" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="job_suppbortModel.taiKhoan_DN" Width="1.5" PointX="7.5" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="job_suppbortModel.taiKhoan_UV" Width="1.5" PointX="9.75" PointY="5.625" IsExpanded="true" />
+        <AssociationConnector Association="job_suppbortModel.FK__congViec__maTrin__0EA330E9" ManuallyRouted="false" />
+        <AssociationConnector Association="job_suppbortModel.FK__tt_ungVie__maCon__173876EA" ManuallyRouted="false" />
+        <AssociationConnector Association="job_suppbortModel.FK__tt_tuyenD__maDia__239E4DCF" ManuallyRouted="false" />
+        <AssociationConnector Association="job_suppbortModel.FK__tt_ungVie__maDia__182C9B23" ManuallyRouted="false" />
+        <AssociationConnector Association="job_suppbortModel.FK__trinhDo__maKyNan__09DE7BCC" ManuallyRouted="false" />
+        <AssociationConnector Association="job_suppbortModel.FK__trinhDo__maNgoai__08EA5793" ManuallyRouted="false" />
+        <AssociationConnector Association="job_suppbortModel.FK__tt_tuyenD__maTin__24927208" ManuallyRouted="false" />
+        <AssociationConnector Association="job_suppbortModel.FK__taiKhoan___ID_do__267ABA7A" ManuallyRouted="false" />
+        <AssociationConnector Association="job_suppbortModel.FK__tt_tuyenD__maTin__22AA2996" ManuallyRouted="true" >
+          <ConnectorPoint PointX="2.921875" PointY="4.875" />
+          <ConnectorPoint PointX="2.921875" PointY="4.5769582763671872" />
+          <ConnectorPoint PointX="4.0995065419627688" PointY="4.5769582763671872" />
+          <ConnectorPoint PointX="4.0995065419627688" PointY="3.97184326171875" />
+          <ConnectorPoint PointX="4.385416666666667" PointY="3.9718432617187496" />
+          <ConnectorPoint PointX="4.552083333333333" PointY="3.97184326171875" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="3.9718432617187496" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="3.97184326171875" />
+          <ConnectorPoint PointX="5.25" PointY="3.97184326171875" />
+        </AssociationConnector>
+        <AssociationConnector Association="job_suppbortModel.FK__taiKhoan_UV__ID__1A14E395" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

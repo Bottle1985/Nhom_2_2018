@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/pageUV.css" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="chuc_nang">
+        <div style="display: flex; flex-direction: row; width: fit-content ; margin: auto;">
+            <img url="~/Home/login" src="~/Content/img/job.jpg" class="img_1" />
+            <div style="display:flex ; flex-direction:column ; margin: auto; margin-left: 5%;">
+                <ul style="display: flex; flex-direction: row; margin:auto;" id="menu_1">
+                    <li class="list_1"><button class="button_1">hồ sơ</button></li>
+                    <li class="list_1"><button class="button_1">đăng bài</button></li>
+                    <li class="list_1"><button class="button_1">tìm việc</button></li>
+                    <li class="list_1"><button class="button_1">thông báo</button></li>
+                    <li class="list_1"><button class="button_1">trợ giúp</button></li>
+                    <li class="list_1"><button class="button_1">tài khoản</button></li>
+                    <li class="list_1" style="border:none"><button class="button_1">đăng xuất</button></li>
+                </ul>
+                <label class="line_1"></label>
+            </div>
+        </div>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

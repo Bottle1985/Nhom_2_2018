@@ -1,0 +1,86 @@
+﻿
+@{
+    ViewBag.Title = "dang_kyUV";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="name_web" align="center">
+    ĐĂNG KÝ ỨNG VIÊN
+</div>
+<form action= "/ung_vien/dang_kyUV" method="post">
+    <div class="ung_vien" style="display: flex; flex-direction: column">
+        <div style="display: flex; flex-direction: row">
+            <div class="avatar">
+                <img src="~/Content/img/avatar.jpg" style=" border-radius: 100%;" />
+            </div>
+            <div style=" display: flex; flex-direction: column;">
+                <div style=" display: flex; flex-direction: row;">
+                    <div style="margin-left: 10%; height : min-content ">
+                        <p class="textt">họ và tên</p>
+                        <input name="ten_uv" class="textbox" />
+                    </div>
+                    <div style="margin-left: 20%; height : min-content">
+                        <p class="textt">giới tính</p>
+                        <input name="gioi_tinh" class="textbox" />
+                    </div>
+                </div>
+                <div style=" display: flex; flex-direction: row;">
+                    <div style="margin-left: 10%; height : min-content ">
+                        <p class="textt">ngày sinh</p>
+                        <input name="ngay_sinh" type="date" class="textbox" />
+                    </div>
+                    <div style="margin-left: 20%; height : min-content">
+                        <p class="textt">số điện thoại</p>
+                        <input name="sdt" class="textbox" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <label class="line_ngan"></label>
+        <div style=" display: flex; flex-direction: column ">
+            <div style=" display: flex; flex-direction: row;">
+                <div style="margin-left: 5%; height : min-content">
+                    <p class="textt">tỉnh</p>
+                    <input name="tinh" class="textbox" style="width :450px" />
+                </div>
+                <div style="margin-left: 10%; height : min-content">
+                    <p class="textt">huyện</p>
+                    <input name="huyen" class="textbox" style="width :450px" />
+                </div>
+            </div>
+            <div style=" display: flex; flex-direction: row;">
+                <div style="margin-left: 5%; height : min-content ">
+                    <p class="textt">thành phố</p>
+                    <input name="thanh_pho" class="textbox" style="width :450px" />
+                </div>
+                <div style="margin-left: 10%; height : min-content">
+                    <p class="textt">email cá nhân</p>
+                    <input name="email" class="textbox" style="width :450px" />
+                </div>
+            </div>
+        </div>
+        <label class="line_ngan"></label>
+        <div style=" display: flex; flex-direction: column ">
+            <div style=" display: flex; flex-direction: row;">
+                <div style="margin-left: 5%; height : min-content">
+                    <p class="textt">tên đăng nhập</p>
+                    <input name="ten_dn" class="textbox" style="width :450px" />
+                </div>
+            </div>
+            <div style=" display: flex; flex-direction: row;">
+                <div style="margin-left: 5%; height : min-content ">
+                    <p class="textt">mật khẩu</p>
+                    <input name="mat_khau" type="password" class="textbox" style="width :450px" />
+                </div>
+                <div style="margin-left: 10%; height : min-content">
+                    <p class="textt">nhập lại mật khẩu</p>
+                    <input name="nhap_lai" type="password" class="textbox" style="width :450px" />
+                </div>
+            </div>
+        </div>
+        <button class="button" style="margin: auto; margin-top: 10%; margin-bottom: 5%;
+          width: 25%; color:white" type="submit">
+            ĐĂNG KÝ
+        </button>
+    </div>
+</form>

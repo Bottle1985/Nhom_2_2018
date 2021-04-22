@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "login";
+}
+
+<THML style="background-color : brown">
+    <div class="ten_dau" style="display:flex ; flex-direction:column ; margin:auto">
+    ĐĂNG NHẬP
+        <label class="line_daude"></label>
+    </div>
+    <form action= "/home/login" method="post" >
+        <div align="center" class="login" style="border-radius : 20px ; border-style: ridge">
+            <div class="input" vertical-align :bottom" align="center">
+                <p style="margin-bottom: 4px; margin-top: 15px">tên đăng nhập</p>
+                <input name="username" placeholder="nhập tên đăng nhập" style="border-top: none; border-left: none; border-right: none; outline: none;width:300px" />
+                <p style="margin-bottom:4px ; margin-top:15px">mật khẩu</p>
+                <input name="password" type="password" style="border-top: none; border-left: none; border-right: none; outline: none; width:300px" placeholder="nhập mật khẩu" />
+            </div>
+            <div style="margin-left: 20%;
+                        margin-top: 5%;
+                        font-size: 15px;
+                        font-style: oblique;">
+                chưa có tài khoản :
+                <button style="background-color: #efbeff;
+                               border-radius: 5px;
+                               border: none;">
+                    @Html.ActionLink("đăng ký","dang_kyUV", "ung_vien")
+                </button>
+            </div>
+            <div>
+                <button class="button_login" type="submit">login</button>
+            </div>
+        </div>
+    </form>
+</THML>

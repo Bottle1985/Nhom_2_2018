@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "home_page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div>
+        <header>
+            <div class="name_web" style="display: flex; flex-direction: column" align="center">
+                KẾT NỐI ỨNG VIÊN VÀ DOANH NGHIỆP
+                <label class="line_daude"></label>
+            </div>
+        </header>
+        <div  class="option">
+            <img src="~/Content/img/job.jpg" class="img" />
+            <div style="margin-left: 20%;
+                         margin-top : 5%">
+                <p style="font-size: 40px;
+                   font-family: 'Times New Roman';"><b>bạn là ai ?</b></p>
+                <div style="padding: 20px;
+                            border-radius: 20px;
+                            border-style: ridge;">
+                    @Html.ActionLink("tôi là ứng viên", "login", "Home", null, new { @class = "button" }) <br />
+                    @Html.ActionLink("tôi là doanh nghiệp", "login", "Home", null, new { @class = "button" })
+                </div>
+            </div>
+        </div>
+    </div>
+
+

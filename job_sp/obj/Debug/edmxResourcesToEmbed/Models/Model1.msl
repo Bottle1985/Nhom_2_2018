@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="job_suppbortModelStoreContainer" CdmEntityContainer="job_suppbortEntities">
+    <EntitySetMapping Name="congViec">
+      <EntityTypeMapping TypeName="job_suppbortModel.congViec">
+        <MappingFragment StoreEntitySet="congViec">
+          <ScalarProperty Name="maCongViec" ColumnName="maCongViec" />
+          <ScalarProperty Name="loaiCongViec" ColumnName="loaiCongViec" />
+          <ScalarProperty Name="tenCongViec" ColumnName="tenCongViec" />
+          <ScalarProperty Name="thoiGian" ColumnName="thoiGian" />
+          <ScalarProperty Name="mucLuong" ColumnName="mucLuong" />
+          <ScalarProperty Name="maTrinhDo" ColumnName="maTrinhDo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="diaChi">
+      <EntityTypeMapping TypeName="job_suppbortModel.diaChi">
+        <MappingFragment StoreEntitySet="diaChi">
+          <ScalarProperty Name="maDiaChi" ColumnName="maDiaChi" />
+          <ScalarProperty Name="tinh" ColumnName="tinh" />
+          <ScalarProperty Name="thanhPho" ColumnName="thanhPho" />
+          <ScalarProperty Name="huyen" ColumnName="huyen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kyNang">
+      <EntityTypeMapping TypeName="job_suppbortModel.kyNang">
+        <MappingFragment StoreEntitySet="kyNang">
+          <ScalarProperty Name="maKyNang" ColumnName="maKyNang" />
+          <ScalarProperty Name="dienDat" ColumnName="dienDat" />
+          <ScalarProperty Name="giaiQuyetVanDe" ColumnName="giaiQuyetVanDe" />
+          <ScalarProperty Name="sangTao" ColumnName="sangTao" />
+          <ScalarProperty Name="hoaDong" ColumnName="hoaDong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ngoaiNgu">
+      <EntityTypeMapping TypeName="job_suppbortModel.ngoaiNgu">
+        <MappingFragment StoreEntitySet="ngoaiNgu">
+          <ScalarProperty Name="maNgoaiNgu" ColumnName="maNgoaiNgu" />
+          <ScalarProperty Name="tenNgoaiNgu" ColumnName="tenNgoaiNgu" />
+          <ScalarProperty Name="nghe" ColumnName="nghe" />
+          <ScalarProperty Name="noi" ColumnName="noi" />
+          <ScalarProperty Name="doc" ColumnName="doc" />
+          <ScalarProperty Name="viet" ColumnName="viet" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="job_suppbortModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tinhTrang_TD">
+      <EntityTypeMapping TypeName="job_suppbortModel.tinhTrang_TD">
+        <MappingFragment StoreEntitySet="tinhTrang_TD">
+          <ScalarProperty Name="maTinhTrang" ColumnName="maTinhTrang" />
+          <ScalarProperty Name="trangThai" ColumnName="trangThai" />
+          <ScalarProperty Name="soLuongCanTuyen" ColumnName="soLuongCanTuyen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tt_tuyenDung">
+      <EntityTypeMapping TypeName="job_suppbortModel.tt_tuyenDung">
+        <MappingFragment StoreEntitySet="tt_tuyenDung">
+          <ScalarProperty Name="ID_doanhNghiep" ColumnName="ID_doanhNghiep" />
+          <ScalarProperty Name="loaiHinhHD" ColumnName="loaiHinhHD" />
+          <ScalarProperty Name="thuocVe" ColumnName="thuocVe" />
+          <ScalarProperty Name="maTinhDo" ColumnName="maTinhDo" />
+          <ScalarProperty Name="veDoanhNghiep" ColumnName="veDoanhNghiep" />
+          <ScalarProperty Name="gmail" ColumnName="gmail" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="maDiaCHi" ColumnName="maDiaCHi" />
+          <ScalarProperty Name="maTinhTrang" ColumnName="maTinhTrang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tt_ungVien">
+      <EntityTypeMapping TypeName="job_suppbortModel.tt_ungVien">
+        <MappingFragment StoreEntitySet="tt_ungVien">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="tenUV" ColumnName="tenUV" />
+          <ScalarProperty Name="gioiTinh" ColumnName="gioiTinh" />
+          <ScalarProperty Name="ngaySinh" ColumnName="ngaySinh" />
+          <ScalarProperty Name="gmail" ColumnName="gmail" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="ghiChu" ColumnName="ghiChu" />
+          <ScalarProperty Name="trangThai" ColumnName="trangThai" />
+          <ScalarProperty Name="maCongViec" ColumnName="maCongViec" />
+          <ScalarProperty Name="maDiaChi" ColumnName="maDiaChi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trinhDo">
+      <EntityTypeMapping TypeName="job_suppbortModel.trinhDo">
+        <MappingFragment StoreEntitySet="trinhDo">
+          <ScalarProperty Name="maTrinhDo" ColumnName="maTrinhDo" />
+          <ScalarProperty Name="totNghiepTruong" ColumnName="totNghiepTruong" />
+          <ScalarProperty Name="nganhHoc" ColumnName="nganhHoc" />
+          <ScalarProperty Name="chuyenNganh" ColumnName="chuyenNganh" />
+          <ScalarProperty Name="kinhNghiemLV" ColumnName="kinhNghiemLV" />
+          <ScalarProperty Name="moTa" ColumnName="moTa" />
+          <ScalarProperty Name="maNgoaiNgu" ColumnName="maNgoaiNgu" />
+          <ScalarProperty Name="maKyNang" ColumnName="maKyNang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="taiKhoan_DN">
+      <EntityTypeMapping TypeName="job_suppbortModel.taiKhoan_DN">
+        <MappingFragment StoreEntitySet="taiKhoan_DN">
+          <ScalarProperty Name="ID_doanhNghiep" ColumnName="ID_doanhNghiep" />
+          <ScalarProperty Name="ten_DN" ColumnName="ten_DN" />
+          <ScalarProperty Name="matKhau" ColumnName="matKhau" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="taiKhoan_UV">
+      <EntityTypeMapping TypeName="job_suppbortModel.taiKhoan_UV">
+        <MappingFragment StoreEntitySet="taiKhoan_UV">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ten_UV" ColumnName="ten_UV" />
+          <ScalarProperty Name="matKhau" ColumnName="matKhau" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

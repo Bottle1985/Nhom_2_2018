@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="job_suppbortModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="congViec">
+    <Key>
+      <PropertyRef Name="maCongViec" />
+    </Key>
+    <Property Name="maCongViec" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="loaiCongViec" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="tenCongViec" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="thoiGian" Type="Int32" />
+    <Property Name="mucLuong" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="maTrinhDo" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="trinhDo" Relationship="Self.FK__congViec__maTrin__0EA330E9" FromRole="congViec" ToRole="trinhDo" />
+    <NavigationProperty Name="tt_ungVien" Relationship="Self.FK__tt_ungVie__maCon__173876EA" FromRole="congViec" ToRole="tt_ungVien" />
+  </EntityType>
+  <EntityType Name="diaChi">
+    <Key>
+      <PropertyRef Name="maDiaChi" />
+    </Key>
+    <Property Name="maDiaChi" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="tinh" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="thanhPho" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="huyen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tt_tuyenDung" Relationship="Self.FK__tt_tuyenD__maDia__239E4DCF" FromRole="diaChi" ToRole="tt_tuyenDung" />
+    <NavigationProperty Name="tt_ungVien" Relationship="Self.FK__tt_ungVie__maDia__182C9B23" FromRole="diaChi" ToRole="tt_ungVien" />
+  </EntityType>
+  <EntityType Name="kyNang">
+    <Key>
+      <PropertyRef Name="maKyNang" />
+    </Key>
+    <Property Name="maKyNang" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="dienDat" Type="Int32" />
+    <Property Name="giaiQuyetVanDe" Type="Int32" />
+    <Property Name="sangTao" Type="Int32" />
+    <Property Name="hoaDong" Type="Int32" />
+    <NavigationProperty Name="trinhDo" Relationship="Self.FK__trinhDo__maKyNan__09DE7BCC" FromRole="kyNang" ToRole="trinhDo" />
+  </EntityType>
+  <EntityType Name="ngoaiNgu">
+    <Key>
+      <PropertyRef Name="maNgoaiNgu" />
+    </Key>
+    <Property Name="maNgoaiNgu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="tenNgoaiNgu" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="nghe" Type="Int32" />
+    <Property Name="noi" Type="Int32" />
+    <Property Name="doc" Type="Int32" />
+    <Property Name="viet" Type="Int32" />
+    <NavigationProperty Name="trinhDo" Relationship="Self.FK__trinhDo__maNgoai__08EA5793" FromRole="ngoaiNgu" ToRole="trinhDo" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tinhTrang_TD">
+    <Key>
+      <PropertyRef Name="maTinhTrang" />
+    </Key>
+    <Property Name="maTinhTrang" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="trangThai" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="soLuongCanTuyen" Type="Int32" />
+    <NavigationProperty Name="tt_tuyenDung" Relationship="Self.FK__tt_tuyenD__maTin__24927208" FromRole="tinhTrang_TD" ToRole="tt_tuyenDung" />
+  </EntityType>
+  <EntityType Name="tt_tuyenDung">
+    <Key>
+      <PropertyRef Name="ID_doanhNghiep" />
+    </Key>
+    <Property Name="ID_doanhNghiep" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="loaiHinhHD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="thuocVe" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="maTinhDo" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="veDoanhNghiep" Type="String" MaxLength="600" FixedLength="false" Unicode="true" />
+    <Property Name="gmail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SDT" Type="Int32" Nullable="false" />
+    <Property Name="maDiaCHi" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="maTinhTrang" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="diaChi" Relationship="Self.FK__tt_tuyenD__maDia__239E4DCF" FromRole="tt_tuyenDung" ToRole="diaChi" />
+    <NavigationProperty Name="tinhTrang_TD" Relationship="Self.FK__tt_tuyenD__maTin__24927208" FromRole="tt_tuyenDung" ToRole="tinhTrang_TD" />
+    <NavigationProperty Name="taiKhoan_DN" Relationship="Self.FK__taiKhoan___ID_do__267ABA7A" FromRole="tt_tuyenDung" ToRole="taiKhoan_DN" />
+    <NavigationProperty Name="trinhDo" Relationship="Self.FK__tt_tuyenD__maTin__22AA2996" FromRole="tt_tuyenDung" ToRole="trinhDo" />
+  </EntityType>
+  <EntityType Name="tt_ungVien">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="tenUV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="gioiTinh" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ngaySinh" Type="DateTime" Precision="0" />
+    <Property Name="gmail" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SDT" Type="Int32" Nullable="false" />
+    <Property Name="ghiChu" Type="String" MaxLength="600" FixedLength="false" Unicode="true" />
+    <Property Name="trangThai" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="maCongViec" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="maDiaChi" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="congViec" Relationship="Self.FK__tt_ungVie__maCon__173876EA" FromRole="tt_ungVien" ToRole="congViec" />
+    <NavigationProperty Name="diaChi" Relationship="Self.FK__tt_ungVie__maDia__182C9B23" FromRole="tt_ungVien" ToRole="diaChi" />
+    <NavigationProperty Name="taiKhoan_UV" Relationship="Self.FK__taiKhoan_UV__ID__1A14E395" FromRole="tt_ungVien" ToRole="taiKhoan_UV" />
+  </EntityType>
+  <EntityType Name="trinhDo">
+    <Key>
+      <PropertyRef Name="maTrinhDo" />
+    </Key>
+    <Property Name="maTrinhDo" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="totNghiepTruong" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="nganhHoc" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="chuyenNganh" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="kinhNghiemLV" Type="Int32" />
+    <Property Name="moTa" Type="String" MaxLength="600" FixedLength="false" Unicode="true" />
+    <Property Name="maNgoaiNgu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="maKyNang" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="congViec" Relationship="Self.FK__congViec__maTrin__0EA330E9" FromRole="trinhDo" ToRole="congViec" />
+    <NavigationProperty Name="kyNang" Relationship="Self.FK__trinhDo__maKyNan__09DE7BCC" FromRole="trinhDo" ToRole="kyNang" />
+    <NavigationProperty Name="ngoaiNgu" Relationship="Self.FK__trinhDo__maNgoai__08EA5793" FromRole="trinhDo" ToRole="ngoaiNgu" />
+    <NavigationProperty Name="tt_tuyenDung" Relationship="Self.FK__tt_tuyenD__maTin__22AA2996" FromRole="trinhDo" ToRole="tt_tuyenDung" />
+  </EntityType>
+  <EntityType Name="taiKhoan_DN">
+    <Key>
+      <PropertyRef Name="ID_doanhNghiep" />
+      <PropertyRef Name="ten_DN" />
+      <PropertyRef Name="matKhau" />
+    </Key>
+    <Property Name="ID_doanhNghiep" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ten_DN" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="matKhau" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="tt_tuyenDung" Relationship="Self.FK__taiKhoan___ID_do__267ABA7A" FromRole="taiKhoan_DN" ToRole="tt_tuyenDung" />
+  </EntityType>
+  <EntityType Name="taiKhoan_UV">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="ten_UV" />
+      <PropertyRef Name="matKhau" />
+    </Key>
+    <Property Name="ID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ten_UV" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="matKhau" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="tt_ungVien" Relationship="Self.FK__taiKhoan_UV__ID__1A14E395" FromRole="taiKhoan_UV" ToRole="tt_ungVien" />
+  </EntityType>
+  <Association Name="FK__congViec__maTrin__0EA330E9">
+    <End Role="trinhDo" Type="Self.trinhDo" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="congViec" Type="Self.congViec" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="trinhDo">
+        <PropertyRef Name="maTrinhDo" />
+      </Principal>
+      <Dependent Role="congViec">
+        <PropertyRef Name="maTrinhDo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tt_ungVie__maCon__173876EA">
+    <End Role="congViec" Type="Self.congViec" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tt_ungVien" Type="Self.tt_ungVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="congViec">
+        <PropertyRef Name="maCongViec" />
+      </Principal>
+      <Dependent Role="tt_ungVien">
+        <PropertyRef Name="maCongViec" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tt_tuyenD__maDia__239E4DCF">
+    <End Role="diaChi" Type="Self.diaChi" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tt_tuyenDung" Type="Self.tt_tuyenDung" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="diaChi">
+        <PropertyRef Name="maDiaChi" />
+      </Principal>
+      <Dependent Role="tt_tuyenDung">
+        <PropertyRef Name="maDiaCHi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tt_ungVie__maDia__182C9B23">
+    <End Role="diaChi" Type="Self.diaChi" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tt_ungVien" Type="Self.tt_ungVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="diaChi">
+        <PropertyRef Name="maDiaChi" />
+      </Principal>
+      <Dependent Role="tt_ungVien">
+        <PropertyRef Name="maDiaChi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__trinhDo__maKyNan__09DE7BCC">
+    <End Role="kyNang" Type="Self.kyNang" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="trinhDo" Type="Self.trinhDo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kyNang">
+        <PropertyRef Name="maKyNang" />
+      </Principal>
+      <Dependent Role="trinhDo">
+        <PropertyRef Name="maKyNang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__trinhDo__maNgoai__08EA5793">
+    <End Role="ngoaiNgu" Type="Self.ngoaiNgu" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="trinhDo" Type="Self.trinhDo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ngoaiNgu">
+        <PropertyRef Name="maNgoaiNgu" />
+      </Principal>
+      <Dependent Role="trinhDo">
+        <PropertyRef Name="maNgoaiNgu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tt_tuyenD__maTin__24927208">
+    <End Role="tinhTrang_TD" Type="Self.tinhTrang_TD" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tt_tuyenDung" Type="Self.tt_tuyenDung" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tinhTrang_TD">
+        <PropertyRef Name="maTinhTrang" />
+      </Principal>
+      <Dependent Role="tt_tuyenDung">
+        <PropertyRef Name="maTinhTrang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__taiKhoan___ID_do__267ABA7A">
+    <End Role="tt_tuyenDung" Type="Self.tt_tuyenDung" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="taiKhoan_DN" Type="Self.taiKhoan_DN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tt_tuyenDung">
+        <PropertyRef Name="ID_doanhNghiep" />
+      </Principal>
+      <Dependent Role="taiKhoan_DN">
+        <PropertyRef Name="ID_doanhNghiep" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tt_tuyenD__maTin__22AA2996">
+    <End Role="trinhDo" Type="Self.trinhDo" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tt_tuyenDung" Type="Self.tt_tuyenDung" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="trinhDo">
+        <PropertyRef Name="maTrinhDo" />
+      </Principal>
+      <Dependent Role="tt_tuyenDung">
+        <PropertyRef Name="maTinhDo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__taiKhoan_UV__ID__1A14E395">
+    <End Role="tt_ungVien" Type="Self.tt_ungVien" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="taiKhoan_UV" Type="Self.taiKhoan_UV" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tt_ungVien">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="taiKhoan_UV">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="job_suppbortEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="congViec" EntityType="Self.congViec" />
+    <EntitySet Name="diaChi" EntityType="Self.diaChi" />
+    <EntitySet Name="kyNang" EntityType="Self.kyNang" />
+    <EntitySet Name="ngoaiNgu" EntityType="Self.ngoaiNgu" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="tinhTrang_TD" EntityType="Self.tinhTrang_TD" />
+    <EntitySet Name="tt_tuyenDung" EntityType="Self.tt_tuyenDung" />
+    <EntitySet Name="tt_ungVien" EntityType="Self.tt_ungVien" />
+    <EntitySet Name="trinhDo" EntityType="Self.trinhDo" />
+    <EntitySet Name="taiKhoan_DN" EntityType="Self.taiKhoan_DN" />
+    <EntitySet Name="taiKhoan_UV" EntityType="Self.taiKhoan_UV" />
+    <AssociationSet Name="FK__congViec__maTrin__0EA330E9" Association="Self.FK__congViec__maTrin__0EA330E9">
+      <End Role="trinhDo" EntitySet="trinhDo" />
+      <End Role="congViec" EntitySet="congViec" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tt_ungVie__maCon__173876EA" Association="Self.FK__tt_ungVie__maCon__173876EA">
+      <End Role="congViec" EntitySet="congViec" />
+      <End Role="tt_ungVien" EntitySet="tt_ungVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tt_tuyenD__maDia__239E4DCF" Association="Self.FK__tt_tuyenD__maDia__239E4DCF">
+      <End Role="diaChi" EntitySet="diaChi" />
+      <End Role="tt_tuyenDung" EntitySet="tt_tuyenDung" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tt_ungVie__maDia__182C9B23" Association="Self.FK__tt_ungVie__maDia__182C9B23">
+      <End Role="diaChi" EntitySet="diaChi" />
+      <End Role="tt_ungVien" EntitySet="tt_ungVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__trinhDo__maKyNan__09DE7BCC" Association="Self.FK__trinhDo__maKyNan__09DE7BCC">
+      <End Role="kyNang" EntitySet="kyNang" />
+      <End Role="trinhDo" EntitySet="trinhDo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__trinhDo__maNgoai__08EA5793" Association="Self.FK__trinhDo__maNgoai__08EA5793">
+      <End Role="ngoaiNgu" EntitySet="ngoaiNgu" />
+      <End Role="trinhDo" EntitySet="trinhDo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tt_tuyenD__maTin__24927208" Association="Self.FK__tt_tuyenD__maTin__24927208">
+      <End Role="tinhTrang_TD" EntitySet="tinhTrang_TD" />
+      <End Role="tt_tuyenDung" EntitySet="tt_tuyenDung" />
+    </AssociationSet>
+    <AssociationSet Name="FK__taiKhoan___ID_do__267ABA7A" Association="Self.FK__taiKhoan___ID_do__267ABA7A">
+      <End Role="tt_tuyenDung" EntitySet="tt_tuyenDung" />
+      <End Role="taiKhoan_DN" EntitySet="taiKhoan_DN" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tt_tuyenD__maTin__22AA2996" Association="Self.FK__tt_tuyenD__maTin__22AA2996">
+      <End Role="trinhDo" EntitySet="trinhDo" />
+      <End Role="tt_tuyenDung" EntitySet="tt_tuyenDung" />
+    </AssociationSet>
+    <AssociationSet Name="FK__taiKhoan_UV__ID__1A14E395" Association="Self.FK__taiKhoan_UV__ID__1A14E395">
+      <End Role="tt_ungVien" EntitySet="tt_ungVien" />
+      <End Role="taiKhoan_UV" EntitySet="taiKhoan_UV" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
